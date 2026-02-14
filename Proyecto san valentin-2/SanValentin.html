@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi San Valentín 💖</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(-45deg,#ff4e8a,#ff8ec7,#ff2e74,#ffb6d9);
+    background-size:400% 400%;
+    animation:gradient 10s ease infinite;
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    padding:30px;
+}
+
+img.profile{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    margin:20px 0;
+    box-shadow:0 0 25px rgba(255,255,255,0.8);
+}
+
+.mensaje-principal{
+    max-width:900px;
+    margin:20px auto;
+    font-size:18px;
+    line-height:1.8;
+    padding:10px 20px;
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.botones{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    margin-top:25px;
+    position:relative;
+    height:60px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.si{
+    background:white;
+    color:#ff2e74;
+    font-weight:bold;
+}
+
+.no{
+    background:rgba(255,255,255,0.4);
+}
+
+
+/* Segunda pantalla */
+.final-screen{
+    display:none;
+    padding:40px 20px;
+}
+
+.carousel{
+    width:90%;
+    max-width:400px;
+    margin:20px auto;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(255,255,255,0.6);
+}
+
+.carousel img{
+    width:100%;
+    display:none;
+}
+
+.carousel img.active{
+    display:block;
+}
+
+.mensaje-final{
+    margin-top:25px;
+    font-size:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PANTALLA 1 -->
+<div class="container" id="pregunta">
+    <h1>Para Ti, Mi Amor 💕</h1>
+
+    <img src="foto/imagen1.jpeg" class="profile">
+
+    <div class="mensaje-principal">
+        <p>
+            Desde que llegaste a mi vida, todo tiene más color, más luz y más sentido. 💖<br><br>
+
+            No fue casualidad encontrarte, fue destino… fue el universo acomodando cada detalle
+            para que nuestras miradas se cruzaran y nuestros corazones entendieran que estaban hechos para latir juntos.<br><br>
+
+            Este San Valentín no es solo una fecha en el calendario… es la oportunidad perfecta
+            para recordarte lo importante que eres para mí, lo feliz que me haces,
+            y lo agradecido que estoy por cada risa, cada abrazo, cada momento a tu lado.<br><br>
+
+            Eres mi paz en los días difíciles, mi sonrisa en los días grises,
+            mi emoción en los días normales y mi sueño más bonito cada noche.
+            Contigo aprendí que el amor no solo se dice… se demuestra, se construye,
+            se cuida y se vive.<br><br>
+
+            Hoy quiero preguntarte algo que nace desde lo más profundo de mi corazón:
+        </p>
+    </div>
+
+    <h2 style="margin-top:25px;">💌 ¿Quieres ser mi San Valentín? 💌</h2>
+
+
+    <div id="contador" style="margin-top:15px; font-size:18px; font-weight:bold;"></div>
+
+    <div class="botones">
+        <button class="si" onclick="aceptar()">Sí mi amor 💘</button>
+        <button class="no" id="noBtn">No 😢</button>
+    </div>
+</div>
+
+<!-- PANTALLA 2 -->
+<div class="final-screen" id="final">
+    <h1>💖 ¡Oficialmente eres mi San Valentín! 💖</h1>
+
+    <div class="carousel">
+        <img src="foto/carrusel1.jpeg" class="active">
+        <img src="foto/carrusel2.jpeg">
+        <img src="foto/carrusel3.jpeg">
+        <img src="foto/carrusel4.jpeg">
+        <img src="foto/carrusel5.jpeg">
+        <img src="foto/carrusel6.jpeg">
+        <img src="foto/carrusel7.jpeg">
+        <img src="foto/carrusel8.jpeg">
+        <img src="foto/carrusel9.jpeg">
+        <img src="foto/carrusel10.jpeg">
+        <img src="foto/carrusel11.jpeg">
+        <img src="foto/carrusel12.jpeg">
+    </div>
+
+    <div class="mensaje-final">
+        Gracias por decirme que sí… 💖  
+
+        No imaginas lo feliz que me hace saber que aceptaste ser mi San Valentín.
+        Tu “sí” no fue solo una respuesta… fue un regalo para mi corazón.  
+
+        Gracias por elegirme, por confiar en mí y por permitirme caminar a tu lado.
+        Prometo seguir cuidándote, respetándote y amándote cada día un poquito más.  
+
+        Hoy celebramos este momento, pero lo que más quiero celebrar
+        es la oportunidad de seguir construyendo nuestra historia juntos,
+        paso a paso, sueño a sueño, abrazo a abrazo.  
+
+        Gracias por existir, por iluminar mi vida
+        y por hacer que todo tenga más sentido desde que estás conmigo.  
+
+        Te amo más de lo que las palabras pueden explicar ❤️✨
+    </div>
+
+</div>
+
+<script>
+
+// BOTÓN NO IMPOSIBLE DE ATRAPAR
+const noBtn = document.getElementById("noBtn");
+
+function moverBoton() {
+    const anchoPantalla = window.innerWidth - noBtn.offsetWidth;
+    const altoPantalla = window.innerHeight - noBtn.offsetHeight;
+
+    const nuevaX = Math.random() * anchoPantalla;
+    const nuevaY = Math.random() * altoPantalla;
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = nuevaX + "px";
+    noBtn.style.top = nuevaY + "px";
+}
+
+// PC
+noBtn.addEventListener("mouseenter", moverBoton);
+
+// Celular
+noBtn.addEventListener("touchstart", moverBoton);
+
+
+
+// 💖 CUANDO ACEPTA
+function aceptar(){
+    document.getElementById("pregunta").style.display="none";
+    document.getElementById("final").style.display="block";
+    iniciarCarrusel();
+}
+
+// 📸 CARRUSEL AUTOMÁTICO
+function iniciarCarrusel(){
+    let index=0;
+    const images=document.querySelectorAll(".carousel img");
+
+    setInterval(()=>{
+        images[index].classList.remove("active");
+        index=(index+1)%images.length;
+        images[index].classList.add("active");
+    },3000);
+}
+
+// 💖 CONTADOR SAN VALENTÍN
+function actualizarContador() {
+
+    // Cambia el año si quieres
+    const fechaSanValentin = new Date("February 14, 2026 00:00:00").getTime();
+    const ahora = new Date().getTime();
+    const diferencia = fechaSanValentin - ahora;
+
+    if (diferencia <= 0) {
+        document.getElementById("contador").innerHTML =
+        "💖 ¡Ya es nuestro San Valentín! 💖";
+        return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    document.getElementById("contador").innerHTML =
+        `💘 Faltan ${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos para nuestro San Valentín 💕`;
+}
+
+setInterval(actualizarContador, 1000);
+actualizarContador();
+
+
+</script>
+
+</body>
+</html>
